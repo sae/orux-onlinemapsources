@@ -90,10 +90,14 @@
 
 <!-- BING -->    
 <!-- virtualearth.net blocked by gui ) -->
-<!-- g=* -->
-    <onlinemapsource uid="5">
-        <name>Bing Hybrid Sae762</name>
-        <url><![CDATA[http://ak.t1.tiles.virtualearth.ne{$s}/tiles/cmd/svhybrid?a={$q}&g=1&dir=dir_n&n=z]]></url>
+       <!-- 01062017: https://t0.ssl.ak.dynamic.tiles.virtualearth.net/comp/ch/121122323?mkt=en-US&it=A,G,L -->
+       <!-- where 121122323 = tile code (and zoom!), A,G,L - layers (roads, satellite, etc -->
+       <!-- L - labels, LA - less labels, A - satellite, G - roads, BX - ? -->
+   <onlinemapsource uid="5">
+        <name>Bing SAT 1</name>
+        <!--http://t0.ssl.ak.dynamic.tiles.virtualearth.net/comp/ch/1212?mkt=en-US&it=A-->
+        <url><![CDATA[http://t0.ssl.ak.dynamic.tiles.virtualearth.ne{$s}/comp/ch/{$q}?mkt=en-US&it=A]]></url>
+        <!--url><![CDATA[http://ak.t1.tiles.virtualearth.ne{$s}/tiles/cmd/svhybrid?a={$q}&g=1&dir=dir_n&n=z]]></url-->
         <minzoom>1</minzoom>
         <maxzoom>19</maxzoom>
         <projection>MERCATORESFERICA</projection>
@@ -110,32 +114,19 @@
         <sop></sop>
     </onlinemapsource>
 
-
-
-<onlinemapsource uid="6">
-<name>Bing STREETS</name>
-<url><![CDATA[http://ak.dynamic.t2.tiles.virtualearth.ne{$s}/comp/ch/{$q}?mk{$s}=en-us&i{$s}=A,G,L,LA]]></url>
-<minzoom>1</minzoom>
-<maxzoom>19</maxzoom>
-<projection>MERCATORESFERICA</projection>
-<cacheable>1</cacheable>
-<downloadable>1</downloadable>
-<servers>t</servers>
-</onlinemapsource>
-
-<onlinemapsource uid="7">
-<name>Bing SAT</name>
-<url><![CDATA[http://a0.ortho.tiles.virtualearth.ne{$s}/tiles/a{$q}.jpg?g=1]]></url>
-<minzoom>1</minzoom>
-<maxzoom>19</maxzoom>
-<projection>MERCATORESFERICA</projection>
-<servers>t</servers>
-<cacheable>1</cacheable>
-<downloadable>1</downloadable>
-</onlinemapsource>
-
+    <onlinemapsource uid="6">
+       <name>Bing MAP </name>
+       <url><![CDATA[http://t0.ssl.ak.dynamic.tiles.virtualearth.ne{$s}/comp/ch/{$q}?mkt=en-US&it=G,BX,L,LA]]></url>
+       <minzoom>1</minzoom>
+       <maxzoom>19</maxzoom>
+       <projection>MERCATORESFERICA</projection>
+       <cacheable>1</cacheable>
+       <downloadable>1</downloadable>
+       <servers>t</servers>
+   </onlinemapsource>
 
 <!--MICOSOFT-->
+<!-- 01062017 - it works too-->
     <onlinemapsource uid="11">
         <name>Microsoft Maps</name>
         <url><![CDATA[http://r0.ortho.tiles.virtualearth.ne{$s}/tiles/r{$q}.png?g=1]]></url>

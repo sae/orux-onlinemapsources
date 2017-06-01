@@ -455,10 +455,10 @@
     </onlinemapsource>
 
 
-<!-- YANDEX -->
+<!-- YANDEX https://vec04.maps.yandex.net/tiles?l=map&v=17.05.26-0&x=2925&y=1505&z=12&scale=1&lang=ru_UA-->
     <onlinemapsource uid="21">
         <name>Yandex Map</name>
-        <url><![CDATA[http://vec0{$s}.maps.yandex.ru/tiles?l=map&v=4.13.1&x={$x}&y={$y}&z={$z}]]></url>
+        <url><![CDATA[http://vec0{$s}.maps.yandex.ru/tiles?l=map&x={$x}&y={$y}&z={$z}]]></url>
         <minzoom>1</minzoom>
         <maxzoom>17</maxzoom>
         <projection>MERCATORELIPSOIDAL</projection>
@@ -476,8 +476,9 @@
     </onlinemapsource>
 
     <onlinemapsource uid="22">
-        <name>Yandex Sat v</name>
-        <url><![CDATA[http://sat0{$s}.maps.yandex.net/tiles?l=sat&v=3.152.0&x={$x}&y={$y}&z={$z}]]></url>
+        <name>Yandex Sat</name>
+        <!--&v=3.322.0&lang=en_US optional-->
+        <url><![CDATA[http://sat0{$s}.maps.yandex.net/tiles?l=sat&x={$x}&y={$y}&z={$z}]]></url>
         <minzoom>0</minzoom>
         <maxzoom>18</maxzoom>
         <projection>MERCATORELIPSOIDAL</projection>
@@ -493,19 +494,6 @@
         <qop></qop>
         <sop></sop>
     </onlinemapsource>
-
-<onlinemapsource uid="23">
-<name>Yandex Sat 2</name>
-<url><![CDATA[http://sat0{$s}.maps.yandex.net/tiles?l=sat&x={$x}&y={$y}&z={$z}&lang=en_US]]></url>
-<minzoom>0</minzoom>
-<maxzoom>18</maxzoom>
-<projection>MERCATORELIPSOIDAL</projection>
-<servers>1,2,3,4</servers>
-<cacheable>1</cacheable>
-<downloadable>1</downloadable>
-<maxthreads>0</maxthreads>
-<sop></sop>
-</onlinemapsource>
 
 <onlinemapsource uid="50">
 <name>Yandex streets (TEST)</name>

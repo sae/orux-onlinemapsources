@@ -184,7 +184,7 @@
 
 
 <!-- HERE -->
-
+<!-- description need to change -->
   <onlinemapsource uid="38">
                 <name>Here Hybrid</name>
                 <url><![CDATA[https://{$s}.aerial.maps.api.here.com/maptile/2.1/maptile/f10316e746/hybrid.day/{$z}/{$x}/{$y}/256/png8?app_id=xWVIueSv6JL0aJ5xqTxb&app_code=djPZyynKsbTjIUDOBcHZ2g&lg=eng&ppi=72]]></url>
@@ -223,9 +223,10 @@
                 <sop></sop>
          </onlinemapsource>
 
-<!-- NOKIA -->
+<!-- NOKIA  uses HERE -->
+<!--
   <onlinemapsource uid="39">
-                <name>Nokia Sat2</name>
+                <name>Nokia/Here Sat2</name>
                 <url><![CDATA[http://{$s}.maps.nlp.nokia.com/maptile/2.1/maptile/cf7f6539c6/satellite.day/{$z}/{$x}/{$y}/256/png8?lg=RUS&token=r0sR1DzqDkS6sDnh902FWQ]]></url>
                 <minzoom>1</minzoom>
                 <maxzoom>19</maxzoom>
@@ -242,7 +243,7 @@
                 <qop></qop>
                 <sop></sop>
          </onlinemapsource>
-
+-->
 <!-- OPEN* -->    
     <onlinemapsource uid="41">
         <name>OpenStreetMap Cyclemap</name>
@@ -322,7 +323,7 @@
 
 
 <!-- OPENWEATHER -->
-         <onlinemapsource uid="407">
+     <onlinemapsource uid="51">
         <name>OpenWeatherMap Clouds</name>
         <url><![CDATA[http://{$s}.tile.openweathermap.org/map/clouds/{$z}/{$x}/{$y}.png]]></url>
         <website><![CDATA[Map data © <a href="http://www.openweathermap.org/" target="_blank">OpenWeatherMap</a>]]></website>
@@ -343,7 +344,7 @@
         <sop></sop>
     </onlinemapsource>
     
-    <onlinemapsource uid="408">
+    <onlinemapsource uid="52">
         <name>OpenWeatherMap Precipitation</name>
         <url><![CDATA[http://{$s}.tile.openweathermap.org/map/precipitation/{$z}/{$x}/{$y}.png]]></url>
         <website><![CDATA[Map data © <a href="http://www.openweathermap.org/" target="_blank">OpenWeatherMap</a>]]></website>
@@ -364,7 +365,7 @@
         <sop></sop>
     </onlinemapsource>
     
-    <onlinemapsource uid="409">
+    <onlinemapsource uid="53">
         <name>OpenWeatherMap Pressure</name>
         <url><![CDATA[http://{$s}.tile.openweathermap.org/map/pressure_cntr/{$z}/{$x}/{$y}.png]]></url>
         <website><![CDATA[Map data © <a href="http://www.openweathermap.org/" target="_blank">OpenWeatherMap</a>]]></website>
@@ -385,7 +386,7 @@
         <sop></sop>
     </onlinemapsource>
     
-    <onlinemapsource uid="410">
+    <onlinemapsource uid="54">
         <name>OpenWeatherMap Wind</name>
         <url><![CDATA[http://{$s}.tile.openweathermap.org/map/wind/{$z}/{$x}/{$y}.png]]></url>
         <website><![CDATA[Map data © <a href="http://www.openweathermap.org/" target="_blank">OpenWeatherMap</a>]]></website>
@@ -406,7 +407,7 @@
         <sop></sop>
     </onlinemapsource>    
 
-    <onlinemapsource uid="411">
+    <onlinemapsource uid="55">
         <name>OpenWeatherMap Snow</name>
         <url><![CDATA[http://{$s}.tile.openweathermap.org/map/snow/{$z}/{$x}/{$y}.png]]></url>
         <website><![CDATA[Map data © <a href="http://www.openweathermap.org/" target="_blank">OpenWeatherMap</a>]]></website>
@@ -427,7 +428,7 @@
         <sop></sop>
     </onlinemapsource>
     
-    <onlinemapsource uid="412">
+    <onlinemapsource uid="56">
         <name>OpenWeatherMap Temp</name>
         <url><![CDATA[http://{$s}.tile.openweathermap.org/map/temp/{$z}/{$x}/{$y}.png]]></url>
         <website><![CDATA[Map data © <a href="http://www.openweathermap.org/" target="_blank">OpenWeatherMap</a>]]></website>
@@ -449,7 +450,7 @@
     </onlinemapsource>
 
 
-<!-- YANDEX https://vec04.maps.yandex.net/tiles?l=map&v=17.05.26-0&x=2925&y=1505&z=12&scale=1&lang=ru_UA-->
+<!-- YANDEX -->
     <onlinemapsource uid="21">
         <name>Yandex Map</name>
         <url><![CDATA[http://vec0{$s}.maps.yandex.ru/tiles?l=map&x={$x}&y={$y}&z={$z}]]></url>

@@ -27,7 +27,7 @@
        <sop></sop>
 </onlinemapsource>
 
-<!-- v=726 ok 2017-06-01 -->
+<!-- v=726 2017-06-01 -->
     <onlinemapsource uid="1">
         <name>2.Google Satellite</name>
         <url><![CDATA[http://khms{$s}.google.com/kh/v=726&x={$x}&y={$y}&z={$z}]]></url>

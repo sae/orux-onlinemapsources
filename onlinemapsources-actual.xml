@@ -10,9 +10,8 @@
 <!-- GOOGLE -->
 <onlinemapsource uid="0">
 <name>1.Google Maps</name>
-       <!-- ok http://mt0.google.com/vt/lyrs=m@255000000&hl=ru&x=0&y=0&z=1 -->
-       <!--? https://www.google.kz/maps/vt/pb=!1m4!1m3!1i11!2i1462!3i749!2m3!1e0!2sm!3i380072336!3m7!2sru!5e1105!12m4!1e68!2m2!1sset!2sRoadmap!4e0!5m1!1e0 -->
-<url><![CDATA[http://mt{$s}.google.com/vt/lyrs=m@255000000&hl=ru&x={$x}&y={$y}&z={$z}]]></url>
+       <!-- change hl=ru to your language -->
+       <url><![CDATA[http://mt{$s}.google.com/vt/lyrs=m@255000000&hl=ru&x={$x}&y={$y}&z={$z}]]></url>
        <minzoom>0</minzoom>
        <maxzoom>19</maxzoom>
        <projection>MERCATORESFERICA</projection>
@@ -32,7 +31,8 @@
 <!-- v=726 2017-06-01 -->
     <onlinemapsource uid="1">
         <name>2.Google Satellite</name>
-        <url><![CDATA[http://khms{$s}.google.com/kh/v=733?x={$x}&y={$y}&z={$z}]]></url>
+        <!--url><![CDATA[http://khms{$s}.google.com/kh/v=733?x={$x}&y={$y}&z={$z}]]></url-->
+		<url><![CDATA[http://mt{$s}.google.com/vt/lyrs=s&x={$x}&y={$y}&z={$z}]]></url>
         <minzoom>0</minzoom>
         <maxzoom>20</maxzoom>
         <projection>MERCATORESFERICA</projection>
@@ -48,26 +48,6 @@
         <qop></qop>
         <sop></sop>
     </onlinemapsource>
-
-       <!-- obsolete?
-<onlinemapsource uid="2">
-        <name>3.Google Hybrid</name>
-        <url><![CDATA[http://mt{$s}.google.com/vt/lyrs=s,m&hl=iw&x={$x}&y={$y}&z={$z}]]></url>
-        <minzoom>0</minzoom>
-        <maxzoom>20</maxzoom>
-        <projection>MERCATORESFERICA</projection>
-        <servers>0,1,2,3</servers>
-        <httpparam name=""></httpparam>
-        <cacheable>1</cacheable>
-        <downloadable>1</downloadable>
-        <maxtilesday>0</maxtilesday>
-        <maxthreads>2</maxthreads>
-        <xop></xop>
-        <yop></yop>
-        <zop></zop>
-        <qop></qop>
-    </onlinemapsource>
-
     <onlinemapsource uid="3">
         <name>4.Google Terrain</name>
         <url><![CDATA[http://mt{$s}.google.com/vt/lyrs=t,r&hl={$l}&x={$x}&y={$y}&z={$z}]]></url>
@@ -86,7 +66,6 @@
         <qop></qop>
         <sop></sop>
     </onlinemapsource>
--->
 
 <!-- BING -->    
 <!-- virtualearth.net blocked by gui ) -->
@@ -223,27 +202,7 @@
                 <sop></sop>
          </onlinemapsource>
 
-<!-- NOKIA  uses HERE -->
-<!--
-  <onlinemapsource uid="39">
-                <name>Nokia/Here Sat2</name>
-                <url><![CDATA[http://{$s}.maps.nlp.nokia.com/maptile/2.1/maptile/cf7f6539c6/satellite.day/{$z}/{$x}/{$y}/256/png8?lg=RUS&token=r0sR1DzqDkS6sDnh902FWQ]]></url>
-                <minzoom>1</minzoom>
-                <maxzoom>19</maxzoom>
-                <projection>MERCATORESFERICA</projection>
-                 <servers>1,2,3,4</servers>
-                <httpparam name=""></httpparam>
-                <cacheable>1</cacheable>
-                <downloadable>1</downloadable>
-                <maxtilesday>0</maxtilesday>
-                <maxthreads>0</maxthreads>
-                <xop></xop>
-                <yop></yop>
-                <zop></zop>
-                <qop></qop>
-                <sop></sop>
-         </onlinemapsource>
--->
+
 <!-- OPEN* -->    
     <onlinemapsource uid="41">
         <name>OpenStreetMap Cyclemap</name>
@@ -322,7 +281,7 @@
     </onlinemapsource>
 
 
-<!-- OPENWEATHER -->
+<!-- OPENWEATHER useless?
      <onlinemapsource uid="51">
         <name>OpenWeatherMap Clouds</name>
         <url><![CDATA[http://{$s}.tile.openweathermap.org/map/clouds/{$z}/{$x}/{$y}.png]]></url>
@@ -448,9 +407,9 @@
         <qop></qop>
         <sop></sop>
     </onlinemapsource>
+-->
 
-
-<!-- YANDEX -->
+<!-- YANDEX doesnt work 
     <onlinemapsource uid="21">
         <name>Yandex Map</name>
         <url><![CDATA[http://vec0{$s}.maps.yandex.ru/tiles?l=map&x={$x}&y={$y}&z={$z}]]></url>
@@ -472,7 +431,6 @@
 
     <onlinemapsource uid="22">
         <name>Yandex Sat</name>
-        <!--&v=3.322.0&lang=en_US optional-->
         <url><![CDATA[http://sat0{$s}.maps.yandex.net/tiles?l=sat&x={$x}&y={$y}&z={$z}]]></url>
         <minzoom>0</minzoom>
         <maxzoom>18</maxzoom>
@@ -502,8 +460,81 @@
 <maxthreads>0</maxthreads>
 <sop></sop>
 </onlinemapsource>
+-->
 
+	<!-- Virtualearth.net -->
+	<onlinemapsource uid="39">
+		<name>VirtualEarth Maps (VIRTUALEARTH)</name>
+		<url><![CDATA[http://ak.dynamic.t{$s}.tiles.virtualearth.net/comp/ch/{$q}?mkt=ru-ru&it=G,VE,BX,L,LA&shading=hill&og=69&n=z]]></url>
+		<minzoom>1</minzoom>
+		<maxzoom>19</maxzoom>
+		<projection>MERCATORESFERICA</projection>
+		<servers>0,1,2,3</servers>
+		<cacheable>1</cacheable>
+		<downloadable>1</downloadable>
+		<maxtilesday>0</maxtilesday>
+		<maxthreads>0</maxthreads>
+		<xop></xop>
+		<yop></yop>
+		<zop></zop>
+		<qop></qop>
+		<sop></sop>
+	</onlinemapsource>
+	<onlinemapsource uid="40">
+		<name>VirtualEarth Sat (VIRTUALEARTH)</name>
+		<url><![CDATA[http://ak.t{$s}.tiles.virtualearth.net/tiles/a{$q}.jpeg?g=1711&n=z]]></url>
+		<minzoom>1</minzoom>
+		<maxzoom>19</maxzoom>
+		<projection>MERCATORESFERICA</projection>
+		<servers>0,1,2,3</servers>
+		<cacheable>1</cacheable>
+		<downloadable>1</downloadable>
+		<maxtilesday>0</maxtilesday>
+		<maxthreads>0</maxthreads>
+		<xop></xop>
+		<yop></yop>
+		<zop></zop>
+		<qop></qop>
+		<sop></sop>
+	</onlinemapsource>
+	<onlinemapsource uid="41">
+		<name>VirtualEarth Hybrid (VIRTUALEARTH)</name>
+		<url><![CDATA[http://ak.dynamic.t{$s}.tiles.virtualearth.net/comp/ch/{$q}?mkt=ru-ru&it=A,G,L,LA&shading=hill&og=69&n=z]]></url>
+		<minzoom>1</minzoom>
+		<maxzoom>19</maxzoom>
+		<projection>MERCATORESFERICA</projection>
+		<servers>0,1,2,3</servers>
+		<cacheable>1</cacheable>
+		<downloadable>1</downloadable>
+		<maxtilesday>0</maxtilesday>
+		<maxthreads>0</maxthreads>
+		<xop></xop>
+		<yop></yop>
+		<zop></zop>
+		<qop></qop>
+		<sop></sop>
+	</onlinemapsource>
 
+	<!-- TOPO OpenTopoMap -->
+	<onlinemapsource uid="59">
+		<name>OpenTopoMap (TOPO)</name>
+		<url><![CDATA[http://{$s}.tile.opentopomap.org/{$z}/{$x}/{$y}.png]]></url>
+		<website><![CDATA[Kartendaten: © <a href="https://openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>-Mitwirkende, SRTM | Kartendarstellung: © <a href="http://opentopomap.org/" target="_blank">OpenTopoMap</a>]]></website>
+		<minzoom>7</minzoom>
+		<maxzoom>15</maxzoom>
+		<projection>MERCATORESFERICA</projection>
+		<servers>a,b,c</servers>
+		<httpparam name="User-Agent">{om}</httpparam>
+		<cacheable>1</cacheable>
+		<downloadable>1</downloadable>
+		<maxtilesday>0</maxtilesday>
+		<maxthreads>0</maxthreads>
+		<xop></xop>
+		<yop></yop>
+		<zop></zop>
+		<qop></qop>
+		<sop></sop>
+	</onlinemapsource>
 
 
 </onlinemapsources>
